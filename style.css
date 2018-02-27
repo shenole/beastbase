@@ -129,6 +129,17 @@ button#submit-btn {
   margin: auto;
   background-color: #219653;
 }
+
+/* Entry List Panel */
+
+.panel#entry-list-panel {
+  padding: 19px 0;
+}
+
+#entry-list-header {
+  width: 100%;
+  height: 120px;
+}
 /*
 ////////////////////////
 FOOTER

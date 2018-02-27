@@ -46,7 +46,7 @@
                   </div>
                 </div>
                   <div class="custom-file">
-                    <label  for="customFile"class="custom-file-label">Choose file</label>
+                    <label  for="customFile" class="custom-file-label">Choose an image file for the entry</label>
                     <input type="file" class="custom-file-input" id="customFile">
                   </div>
                   <div class="form-group">
@@ -62,15 +62,18 @@
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 section" id="entry-list-col">
           <!-- End Entry Form -->
           <!-- Begin Entry List -->
-          <div class="panel">
-            <h2>Entry list</h2>
-
+          <div class="panel" id="entry-list-panel">
+            <div id="entry-list-header">
+              <h2>Entry list</h2>
+            </div>
+            <ul id="animal-entries"></ul>
           </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 section" id="entry-display-col">
+          <!-- End Entry List -->
+          <!-- Begin Entry Display -->
           <div class="panel">
             <h2>Entry Display</h2>
-
           </div>
         </div>
       </div>
