@@ -1,0 +1,144 @@
+/*
+////////////////////////
+Re-Useable code
+////////////////////////
+Fonts:
+font-family: 'Roboto', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Open Sans', sans-serif;
+
+Color Pallet:
+(black) #000000;
+(dark grey) #4F4F4F;
+(grey) #C4C4C4;
+(light grey) #F2F2F2;
+(white) #FFFFFF;
+(orange) #F2994A;
+(dark yellow) #F2C94C;
+(green) #219653;
+(blue) #2F80ED;
+////////////////////////
+*/
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #F2F2F2;
+}
+/*
+////////////////////////
+FONTS
+////////////////////////
+*/
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+h3 {
+  display: inline;
+  color: #F2F2F2;
+}
+
+h6 {
+  text-align: center;
+  color: #F2F2F2;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #F4F4F4;
+}
+
+.field-lable {
+  font-size: 18px;
+}
+
+.btn-text {
+  font-size: 18px;
+  color: #F2F2F2;
+}
+
+#link {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #2F80ED;
+}
+/*
+////////////////////////
+HEADER
+////////////////////////
+*/
+.row#header {
+  height: 55px;
+  background-color: #111111;
+  padding: 10px 0px;
+}
+
+#paw-logo {
+  margin-bottom: 14px;
+}
+/*
+////////////////////////
+MAIN CONTENT
+////////////////////////
+*/
+.row#main-content {
+  padding: 50px 25px;
+}
+
+.section {
+  padding: 0px 29px;
+}
+
+.panel {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  height: 730px;
+  padding: 20px;
+}
+
+.form-row {
+  margin-bottom: 12px;
+}
+
+.form-control {
+  background-color: #4F4F4F;
+  font-family: 'Open Sans', sans-serif;
+  color: #F2F2F2;
+}
+
+.custom-file {
+  margin-bottom: 14px;
+}
+
+#obs-notes {
+  height: 200px;
+}
+
+#btn-div {
+  width: 100%;
+  padding: 14px 0;
+}
+
+button#submit-btn {
+  width: 114px;
+  display: block;
+  margin: auto;
+  background-color: #219653;
+}
+/*
+////////////////////////
+FOOTER
+////////////////////////
+*/
+.row#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #111111;
+  padding: 25px 0px;
+}
