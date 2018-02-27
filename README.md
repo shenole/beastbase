@@ -7,5 +7,4 @@ Technologies Used:
 - JavaScript
 - Bootstrap 4
 - Firebase API
-- Firebase Auth UI
 - Google Maps API
