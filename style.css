@@ -51,6 +51,10 @@ p {
   color: #F4F4F4;
 }
 
+p.dark {
+  color: #4F4F4F;
+}
+
 .field-lable {
   font-size: 18px;
 }
@@ -140,6 +144,24 @@ button#submit-btn {
   width: 100%;
   height: 120px;
 }
+
+/* Enty Display panel */
+
+#entry-display-row {
+  margin-top: 25px;
+}
+
+#entry-img {
+  height: 314px;
+  background-color: #4F4F4F;
+  padding-left: 13px;
+}
+
+#entry-text {
+  height: 304px;
+  padding-left: 18px;
+}
+
 /*
 ////////////////////////
 FOOTER
