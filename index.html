@@ -66,7 +66,9 @@
             <div id="entry-list-header">
               <h2>Entry list</h2>
             </div>
-            <ul id="animal-entries"></ul>
+            <div id="animal-entry-div">
+              <ul id="animal-entries"></ul>
+            </div>
           </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 section" id="entry-display-col">
@@ -90,9 +92,8 @@
                 mauris curabitur tellus.
                 <br>
                 <br>
-                Vehicula sollicitudin euismod volutpat.
-                Nisl eros torquent at in mauris, vel ducimus arcu nam, suscipit
-                cras mauris nunc, hendrerit viverra.
+                Vehicula sollicitudin euismod volutpat Nisl eros torquent at
+                in.
               </p>
               <h4>Date of Observation</h4>
               <p class="dark" id="date-entry">xx/xx/xxxx</p>
@@ -100,6 +101,7 @@
           </div>
             <div id="entry-map">
               <h4>Observation Location</h4>
+              <div id="map"></div>
             </div>
           </div>
         </div>
@@ -115,6 +117,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAp9tpFzFgqHfkPTHWJSydE1NPAw68oBjA&callback=initMap" async defer></script>
     <script src="main.js"></script>
   </body>
   </html>

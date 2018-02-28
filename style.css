@@ -90,7 +90,7 @@ MAIN CONTENT
 ////////////////////////
 */
 .row#main-content {
-  padding: 50px 25px;
+  padding: 47px 0;
 }
 
 .section {
@@ -103,6 +103,8 @@ MAIN CONTENT
   height: 730px;
   padding: 20px;
 }
+
+/* Entry Form */
 
 .form-row {
   margin-bottom: 12px;
@@ -142,13 +144,20 @@ button#submit-btn {
 
 #entry-list-header {
   width: 100%;
-  height: 120px;
+  margin-bottom: 27px;
+}
+
+#animal-entry-div {
+  width: 100%;
+  height: auto;
+  overflow: auto;
 }
 
 /* Enty Display panel */
 
 #entry-display-row {
   margin-top: 25px;
+  padding-left: 16px;
 }
 
 #entry-img {
@@ -160,6 +169,21 @@ button#submit-btn {
 #entry-text {
   height: 304px;
   padding-left: 18px;
+  overflow-y: auto;
+}
+
+/* Entry Display */
+
+#entry-map {
+  margin-top: 25px;
+  width: 100%;
+  height: 270px;
+}
+
+#map {
+  width: 100%;
+  height: 240px;
+  background-color: #4F4F4F;
 }
 
 /*
@@ -168,9 +192,8 @@ FOOTER
 ////////////////////////
 */
 .row#footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+
+  min-width: 100%;
   height: 70px;
   background-color: #111111;
   padding: 25px 0px;
