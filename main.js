@@ -39,6 +39,16 @@ function submitForm(e) {
     document.querySelector('#entry-form').reset();
   }, 0001);
 
+
+  //Entry List is populated
+  
+
+
+
+  //Entry Display is populated
+
+
+
   //Hide alert after 3 secnds
   setTimeout(function() {
     document.querySelector('#submit-success').style.display = 'none';

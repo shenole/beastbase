@@ -174,7 +174,30 @@ button#submit-btn {
   overflow: auto;
 }
 
-/* Enty Display panel */
+ul#animal-entries {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #C4C4C4;
+}
+
+ul#animal-entries li {
+  padding: 8px 16px;
+  border-bottom: 1px solid #C4C4C4;
+}
+
+ul#animal-entries li:hover {
+  background-color: #F2C94C;
+}
+
+ul#animal-entries li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+table {
+  width: 100%;
+}
 
 #entry-display-row {
   margin-top: 25px;
