@@ -55,6 +55,11 @@ p.dark {
   color: #4F4F4F;
 }
 
+p#white {
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+
 .field-lable {
   font-size: 18px;
 }
@@ -110,6 +115,10 @@ MAIN CONTENT
   margin-bottom: 12px;
 }
 
+.form-group {
+  margin-bottom: 12px;
+}
+
 .form-control {
   background-color: #4F4F4F;
   font-family: 'Open Sans', sans-serif;
@@ -121,7 +130,19 @@ MAIN CONTENT
 }
 
 #obs-notes {
-  height: 200px;
+  height: 180px;
+}
+
+#submit-success {
+  text-align: center;
+  padding: 6px;
+
+}
+
+.alert {
+  background-color: #79c879;
+  margin: 0;
+  display: none;
 }
 
 #btn-div {
