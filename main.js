@@ -44,7 +44,6 @@ function submitForm(e) {
   
 
 
-
   //Entry Display is populated
 
 
