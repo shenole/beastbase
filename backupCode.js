@@ -1,4 +1,4 @@
-//////////// INITIALIZE FIREBASE ////////////
+// Initialize Firebase
 var config = {
   apiKey: "AIzaSyBAxKjMZtJYfYvExZC3Kz-I7W-whTDfwQQ",
   authDomain: "beastbase-578d4.firebaseapp.com",
@@ -9,18 +9,7 @@ var config = {
 };
 
 firebase.initializeApp(config);
-let database = firebase.database();
-
-//////////// INITIALIZE GOOGLEMAP ////////////
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    mapTypeId: 'satellite',
-    center: {lat: 20, lng: 0},
-    zoom: 2
-  });
-}
-
-
+database = firebase.database();
 
 //Reference messages collection
 let messagesRef = database.ref('messages');
@@ -74,52 +63,8 @@ function saveMessage(animal, date, lng, lat, file, notes) {
     notes: notes
   });
 
-/*
-//Code to add a marker to the google map display
-  var Latlng = new google.maps.LatLng(latitude.value,longitude.value);
-    var marker = new google.maps.Marker({
-    position: Latlng,
-    map: map
-  });
-*/
 
 
-
-//Code to receive data from firebase
-function receiveUpdate(newMessageRef) {
-  let data = newMessageRef.val();
-  document.querySelector('#test').innerHTML = '';
-  for(var key in data) {
-    let subject = data[key];
-    document.querySelector('#test').innerHTML += data.animal;
-  }
-  //document.querySelector('#test').innerHTML = '';
-  //document.querySelector('#test').innerHTML = data.animal;
-}
-
-
-
-messagesRef.on('value', receiveUpdate);
-
-/*
-  console.log(snapshot.val());
-}, function (errorObject) {
-  alert("The submission failed: " + errorObject.code);
-});
-*/
-
-/*
-//New Entry List Object Created
-let AnimalListItem = function(animal, date, lng, lat, file, notes) {
-  this.animal = animal;
-  this.date = date;
-  this.lng = lng;
-  this.lat = lat;
-  this.file = file;
-  this.notes = notes;
-
-
-ListElement = function() {
   //Entry List is populated
   let newLi = document.createElement('li');
   let newTable = document.createElement('table');
@@ -151,11 +96,39 @@ ListElement = function() {
   newTrTwo.appendChild(newTdTwo);
   newTrTwo.appendChild(newTdThree);
 
-  newTdTwo.innerHTML = animal;
-  newTdThree.innerHTML = date;
+  //Entry List is populated........... Entry Values are injected
+  messagesRef.on('value', gotData, errData);
 
-};
-*/
-  //Entry Display is populated */
+  function gotData(data) {
+    //console.log(data.val());
+    let messages = data.val();
+    let keys = Object.keys(messages);
+    //console.log(keys);
+    for (i = 0; i < keys.length; i++) {
+      let k = keys[i];
+      let subject = messages[k].animal;
+      let lat = messages[k].lat;
+
+      //newTdOne.innerHTML = keys.length;
+      //newTdTwo.innerHTML = subject;
+      console.log(subject);
+    }
+  }
+
+  function errData(err) {
+    console.log('Error!');
+    console.log(err);
+  }
+
+
+  //function setID() {
+    //for(i = 0; i < document.getElementsByTagName('li').length + 1; i++) {
+      //newTdOne.innerHTML = i;
+    //}
+  //};
+  //setID();
+
+
+  //Entry Display is populated
 
 }

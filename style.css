@@ -22,7 +22,7 @@ Color Pallet:
 html, body {
   width: 100%;
   height: 100%;
-  background-color: #F2F2F2;
+  background-color: #F0F0F0;
 }
 /*
 ////////////////////////
@@ -48,7 +48,7 @@ h6 {
 p {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  color: #F4F4F4;
+  color: #000000;
 }
 
 p.dark {
@@ -157,10 +157,15 @@ button#submit-btn {
   background-color: #219653;
 }
 
+button#submit-btn:hover {
+  background-color: #036D19;
+}
+
 /* Entry List Panel */
 
 .panel#entry-list-panel {
   padding: 19px 0;
+  overflow-y: auto;
 }
 
 #entry-list-header {
@@ -170,8 +175,6 @@ button#submit-btn {
 
 #animal-entry-div {
   width: 100%;
-  height: auto;
-  overflow: auto;
 }
 
 ul#animal-entries {
@@ -199,6 +202,8 @@ table {
   width: 100%;
 }
 
+/* Entry Display */
+
 #entry-display-row {
   margin-top: 25px;
   padding-left: 16px;
@@ -215,8 +220,6 @@ table {
   padding-left: 18px;
   overflow-y: auto;
 }
-
-/* Entry Display */
 
 #entry-map {
   margin-top: 25px;
@@ -238,7 +241,65 @@ FOOTER
 .row#footer {
 
   min-width: 100%;
-  height: 70px;
+  height: 94px;
   background-color: #111111;
-  padding: 25px 0px;
+  padding: 37px 0px;
+}
+
+/*
+////////////////////////
+MEDIA QUERIES
+////////////////////////
+*/
+@media screen and (max-width: 1200px) {
+  #entry-form-panel {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+.panel#display-panel {
+    margin-top: 55px;
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+
+  #entry-form-panel, #entry-list-panel {
+    height: 810px;
+  }
+
+  .panel#display-panel {
+      height: 740px;
+    }
+
+}
+
+@media screen and (max-width: 736px) {
+
+  .panel#display-panel {
+      height: 1100px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+  #entry-form-panel {
+    margin-bottom: 50px;
+  }
+
+  #entry-display-row {
+    padding-left: 0px;
+  }
+
+  #entry-text {
+    margin-top: 40px;
+  }
+
+  .panel#display-panel {
+      height: 1100px;
+    }
+
 }
