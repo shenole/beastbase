@@ -76,9 +76,6 @@ function saveMessage(animal, date, lng, lat, file, notes) {
     file: file,
     notes: notes
   });
-
-
-
 }
 
 /////////////////////////////////////
@@ -86,14 +83,62 @@ function saveMessage(animal, date, lng, lat, file, notes) {
 /////////////////////////////////////
 function receiveUpdate(received) {
   var data = received.val();
-  console.log(data);
-  document.getElementById('test').innerHTML = '';
+  //document.getElementById('test').innerHTML = '';
+
+  // Code for new entry elements
+  var animalEntries = document.getElementById('animal-entries');
+
+  // Create listing variables
+  var newLi = document.createElement('li');
+  var newLink = document.createElement('a');
+  var newTable = document.createElement('table');
+  var newTrOne = document.createElement('tr');
+  var newThOne = document.createElement('th');
+  var newThTwo = document.createElement('th');
+  var newThThree = document.createElement('th');
+  var newTrTwo = document.createElement('tr');
+  var newTdOne = document.createElement('td');
+  var newTdTwo = document.createElement('td');
+  var newTdThree = document.createElement('td');
+
   for(var key in data) {
     var subject = data[key];
-    var p = '<p>' + subject.animal + '' + subject.notes + '</p>';
-    document.getElementById('test').innerHTML += p;
-  }
 
+    // Create listing elements
+    animalEntries.appendChild(newLi);
+    newLi.appendChild(newLink);
+    newLink.appendChild(newTable);
+    newTable.appendChild(newTrOne);
+    newTrOne.appendChild(newThOne);
+    newTrOne.appendChild(newThTwo);
+    newTrOne.appendChild(newThThree);
+    newTable.appendChild(newTrTwo);
+    newTrTwo.appendChild(newTdOne);
+    newTrTwo.appendChild(newTdTwo);
+    newTrTwo.appendChild(newTdThree);
+
+    // Insuring new listing elements are empty
+    newThOne.innerHTML = '';
+    newThTwo.innerHTML = '';
+    newThThree.innerHTML = '';
+
+    newTdOne.innerHTML = '';
+    newTdTwo.innerHTML = '';
+    newTdThree.innerHTML = '';
+
+    // Listing elemnts are populated
+    var hFourOne = '<h4>' + 'Rec#: ' + '</h4>'
+    var hFourTwo = '<h4>' + 'Animal: ' + '</h4>'
+    var hFourThree = '<h4>' + 'DofO: ' + '</h4>'
+
+    newThOne.innerHTML += hFourOne;
+    newThTwo.innerHTML += hFourTwo;
+    newThThree.innerHTML += hFourThree;
+
+    newTdOne.innerHTML += '';
+    newTdTwo.innerHTML += subject.animal;
+    newTdThree.innerHTML += subject.date;
+  }
 }
 
 messagesRef.on('value', receiveUpdate);
