@@ -141,20 +141,23 @@ function receiveUpdate(received) {
     newTdThree.innerHTML += subject.date;
 
     // Populate display elements
+    var aniName = document.getElementById('animal-title');
     var obsDate = document.getElementById('date-entry');
     var notation = document.getElementById('animal-notes');
     var image = document.getElementById('entry-img');
 
     // Insuring new display elements are empty
+    aniName.innerHTML = '';
     obsDate.innerHTML = '';
     notation.innerHTML = '';
     image.style.background = '';
 
 
     //display elements are populated
+    aniName.innerHTML += subject.animal;
     obsDate.innerHTML += subject.date;
     notation.innerHTML += subject.notes;
-    image.style.background += (subject.file);
+    image.style.background += subject.file;
 
   }
 }
