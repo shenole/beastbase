@@ -105,6 +105,7 @@ function receiveUpdate(received) {
     // Create listing elements
     animalEntries.appendChild(newLi);
     newLi.appendChild(newLink);
+    //newLink.setAttribute('href', '#');
     newLink.appendChild(newTable);
     newTable.appendChild(newTrOne);
     newTrOne.appendChild(newThOne);
@@ -116,6 +117,8 @@ function receiveUpdate(received) {
     newTrTwo.appendChild(newTdThree);
 
     // Insuring new listing elements are empty
+    newLink.setAttribute('href', '#');
+
     newThOne.innerHTML = '';
     newThTwo.innerHTML = '';
     newThThree.innerHTML = '';
@@ -141,10 +144,14 @@ function receiveUpdate(received) {
     newTdThree.innerHTML += subject.date;
 
     // Populate display elements
+    //newLink.setAttribute('href', 'data.key');
+
     var aniName = document.getElementById('animal-title');
     var obsDate = document.getElementById('date-entry');
     var notation = document.getElementById('animal-notes');
     var image = document.getElementById('entry-img');
+
+
 
     // Insuring new display elements are empty
     aniName.innerHTML = '';
@@ -158,6 +165,25 @@ function receiveUpdate(received) {
     obsDate.innerHTML += subject.date;
     notation.innerHTML += subject.notes;
     image.style.background += subject.file;
+
+    //EXPERIMENT (click entry changes display)
+    newLink.addEventListener('click', function() {
+      this.subject = subject;
+      // Insuring new display elements are empty
+      aniName.innerHTML = '';
+      obsDate.innerHTML = '';
+      notation.innerHTML = '';
+      image.style.background = '';
+
+
+      //display elements are populated
+      aniName.innerHTML += subject.animal;
+      obsDate.innerHTML += subject.date;
+      notation.innerHTML += subject.notes;
+      image.style.background += subject.file;
+      //END EXPERIMENT
+
+    })
 
   }
 }

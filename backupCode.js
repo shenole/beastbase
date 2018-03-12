@@ -82,3 +82,32 @@ function saveMessage(animal, date, lng, lat, file, notes) {
 
   messagesRef.on('value', receiveUpdate);
   */
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////
+//  EXPERIMENTS
+//////////////////////////////////
+
+
+// The following code should be made into a function:
+
+// Insuring new display elements are empty
+aniName.innerHTML = '';
+obsDate.innerHTML = '';
+notation.innerHTML = '';
+image.style.background = '';
+
+
+//display elements are populated
+aniName.innerHTML += subject.animal;
+obsDate.innerHTML += subject.date;
+notation.innerHTML += subject.notes;
+image.style.background += subject.file;
