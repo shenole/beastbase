@@ -4,13 +4,12 @@ var config = {
   authDomain: "beastbase-578d4.firebaseapp.com",
   databaseURL: "https://beastbase-578d4.firebaseio.com",
   projectId: "beastbase-578d4",
-  storageBucket: "",
+  storageBucket: "<BUCKET>.appspot.com",
   messagingSenderId: "306152775383"
 };
 
 firebase.initializeApp(config);
 var database = firebase.database();
-
 
 
 //////////// INITIALIZE GOOGLEMAP ////////////
@@ -21,7 +20,6 @@ function initMap() {
     zoom: 2
   });
 }
-
 
 
 
@@ -141,6 +139,23 @@ function receiveUpdate(received) {
     newTdOne.innerHTML += recNo.length;
     newTdTwo.innerHTML += subject.animal;
     newTdThree.innerHTML += subject.date;
+
+    // Populate display elements
+    var obsDate = document.getElementById('date-entry');
+    var notation = document.getElementById('animal-notes');
+    var image = document.getElementById('entry-img');
+
+    // Insuring new display elements are empty
+    obsDate.innerHTML = '';
+    notation.innerHTML = '';
+    image.style.background = '';
+
+
+    //display elements are populated
+    obsDate.innerHTML += subject.date;
+    notation.innerHTML += subject.notes;
+    image.style.background += (subject.file);
+
   }
 }
 

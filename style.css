@@ -212,6 +212,8 @@ table {
 #entry-img {
   height: 314px;
   background-color: #4F4F4F;
+  background-position: center;
+  background-size: cover;
   padding-left: 13px;
 }
 
