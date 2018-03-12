@@ -38,13 +38,13 @@ function submitForm(e) {
   //Get values
   var animal = getInputVal('animal-name');
   var date = getInputVal('observation-date');
-  var lng = getInputVal('longitude');
   var lat = getInputVal('latitude');
+  var lng = getInputVal('longitude');
   var file = getInputVal('customFile');
   var notes = getInputVal('obs-notes');
 
   //Save message
-  saveMessage(animal, date, lng, lat, file, notes);
+  saveMessage(animal, date, lat, lng, file, notes);
 
   //Show alert
   document.querySelector('#submit-success').style.display = 'block';
@@ -66,13 +66,13 @@ function getInputVal(id) {
 }
 
 //Save messages to firebase
-function saveMessage(animal, date, lng, lat, file, notes) {
+function saveMessage(animal, date, lat, lng, file, notes) {
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
     animal: animal,
     date: date,
-    lng: lng,
     lat: lat,
+    lng: lng,
     file: file,
     notes: notes
   });
@@ -127,15 +127,18 @@ function receiveUpdate(received) {
     newTdThree.innerHTML = '';
 
     // Listing elemnts are populated
-    var hFourOne = '<h4>' + 'Rec#: ' + '</h4>'
-    var hFourTwo = '<h4>' + 'Animal: ' + '</h4>'
-    var hFourThree = '<h4>' + 'DofO: ' + '</h4>'
+    var hFourOne = '<h4>' + 'Rec#: ' + '</h4>';
+    var hFourTwo = '<h4>' + 'Animal: ' + '</h4>';
+    var hFourThree = '<h4>' + 'DofO: ' + '</h4>';
 
     newThOne.innerHTML += hFourOne;
     newThTwo.innerHTML += hFourTwo;
     newThThree.innerHTML += hFourThree;
 
-    newTdOne.innerHTML += '';
+    // Record number is calculated
+    var recNo = Object.keys(data);
+
+    newTdOne.innerHTML += recNo.length;
     newTdTwo.innerHTML += subject.animal;
     newTdThree.innerHTML += subject.date;
   }
